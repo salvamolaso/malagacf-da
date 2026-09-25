@@ -285,3 +285,23 @@ header .nav-wrapper { background-color: var(--brand-primary); }
 header nav a:any-link { color: #fff; }
 footer { background-color: var(--dark-color); color: #fff; }
 footer a:any-link { color: #fff; }
+
+/* Hero legible */
+.hero h1,
+.hero p {
+  color: #fff;
+  text-shadow: 0 2px 8px rgb(0 0 0 / 45%);
+}
+
+.hero::after {
+  background: linear-gradient(90deg, rgb(10 31 92 / 92%) 0%, rgb(0 51 160 / 55%) 60%, rgb(0 51 160 / 25%) 100%);
+}
+
+/* Contenido centrado */
+main > .section > div {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
