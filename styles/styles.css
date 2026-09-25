@@ -10,36 +10,19 @@
  * governing permissions and limitations under the License.
  */
 
+/* Málaga CF – sustituir el bloque :root de styles/styles.css */
 :root {
-  /* colors */
-  --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
-
-  /* fonts */
+  --background-color: #fafbfd;
+  --light-color: #eef2fa;
+  --dark-color: #0a1f5c;
+  --text-color: #101316;
+  --link-color: #0033a0;
+  --link-hover-color: #a8893b;
+  --brand-primary: #0033a0;
+  --brand-secondary: #4c6eab;
+  --brand-accent: #a8893b;
   --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
-
-  /* nav heights */
-  --nav-height: 64px;
-  --breadcrumbs-height: 34px;
-  --header-height: var(--nav-height);
+  --heading-font-family: "Barlow Condensed", roboto-condensed, roboto-condensed-fallback, sans-serif;
 }
 
 /* fallback fonts */
@@ -262,3 +245,43 @@ main .section.highlight {
   margin: 0;
   padding: 40px 0;
 }
+/* ---- pegar al final del archivo ---- */
+a.button:any-link, button {
+  background-color: var(--brand-primary);
+  color: #fff;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+a.button:hover, a.button:focus, button:hover, button:focus { background-color: var(--brand-accent); }
+a.button.secondary, button.secondary {
+  background-color: transparent;
+  border: 2px solid var(--brand-primary);
+  color: var(--brand-primary);
+}
+h1, h2, h3 {
+  font-family: var(--heading-font-family);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--dark-color);
+}
+h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 8px;
+  background: var(--brand-accent);
+}
+.hero h1 { color: #fff; }
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgb(0 51 160 / 85%) 0%, rgb(0 51 160 / 20%) 70%);
+  z-index: -1;
+}
+header .nav-wrapper { background-color: var(--brand-primary); }
+header nav a:any-link { color: #fff; }
+footer { background-color: var(--dark-color); color: #fff; }
+footer a:any-link { color: #fff; }
